@@ -1,0 +1,101 @@
+/* Customization of Start Bootstrap Resume. The upstream license is retained. */
+:root { --bs-primary: #246a9c; --bs-primary-rgb: 36, 106, 156; }
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", Arial, sans-serif; color: #596772; }
+h1, h2, h3, h4, h5, h6, .subheading { font-family: inherit; text-transform: none; }
+h1 { font-size: clamp(3.4rem, 8vw, 6.5rem); letter-spacing: -.055em; line-height: 1.1; overflow-wrap: anywhere; }
+h2 { font-size: clamp(1.85rem, 4vw, 2.65rem); letter-spacing: -.025em; }
+a { color: #246a9c; }
+a:hover { color: #154b73; }
+:focus-visible { outline: 3px solid #df9b24; outline-offset: 4px; }
+.bg-primary { background-color: #246a9c !important; }
+.profile-monogram { display: flex; align-items: center; justify-content: center; width: 8.7rem; height: 8.7rem; border: .4rem solid #ffffff42; border-radius: 50%; color: white; font-size: 4.8rem; font-weight: 300; line-height: 1; }
+.navbar-brand { letter-spacing: .025em; }
+#sideNav .navbar-nav .nav-item .nav-link { letter-spacing: .1em; font-size: .84rem; padding-top: .65rem; padding-bottom: .65rem; }
+.name-dot { color: #246a9c; }
+.eyebrow { text-transform: uppercase; letter-spacing: .18em; font-size: .75rem; font-weight: 650; color: #246a9c; margin-bottom: 1.5rem; }
+.subheading { font-size: 1.15rem; color: #72818e; letter-spacing: .15em; }
+.introduction { max-width: 42rem; font-size: 1.12rem; line-height: 1.9; }
+.draft-note { display: inline-block; font-size: .8rem; color: #657481; background: #f1f5f7; padding: .35rem .65rem; border-radius: .25rem; }
+.btn-outline-primary { color: #246a9c; border-color: #246a9c; }
+.btn-outline-primary:hover, .btn-outline-primary:active { color: #fff; background: #246a9c; border-color: #246a9c; }
+section.resume-section { min-height: 0; padding-top: 4rem; padding-bottom: 4rem; }
+section#about { min-height: 0; }
+.section-note { border-left: 2px solid #dce6ed; padding-left: 1.1rem; line-height: 1.9; color: #657481; }
+.publications-heading-row { display: flex; align-items: baseline; flex-wrap: wrap; gap: .6rem 1.5rem; margin-bottom: .5rem; }
+.publications-heading-row h2 { margin: 0; }
+.publications-heading-row > a { font-size: .88rem; }
+.publication-legend { font-size: .8rem; color: #657481; margin: .6rem 0 2rem; }
+.publication { display: grid; grid-template-columns: minmax(0, 15rem) minmax(0, 1fr); gap: 1.6rem; align-items: start; padding-bottom: 1.8rem; margin-bottom: 1.8rem; border-bottom: 1px solid #edf0f3; }
+.publication-list .publication:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
+.publication-image { display: flex; align-items: center; justify-content: center; width: 100%; aspect-ratio: 5 / 3; border: 1px solid #e5ebef; border-radius: .3rem; overflow: hidden; background: #fff; }
+.publication-image img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.publication-image:hover { border-color: #9db9ce; }
+.publication-image-placeholder { flex-direction: column; gap: .2rem; border-style: dashed; background: #f7f9fb; color: #7b8a95; font-size: .8rem; }
+.publication-image-placeholder small { font-size: .72rem; color: #7b8a95; }
+.placeholder-symbol { font-size: 1.65rem; line-height: 1.3; color: #a6b5c0; }
+.publication-title { font-size: 1.1rem; font-weight: 650; line-height: 1.45; margin: -.15rem 0 .5rem; overflow-wrap: anywhere; }
+.publication-title a { text-decoration: none; }
+.publication-title a:hover { text-decoration: underline; text-underline-offset: .15em; }
+.publication p { font-size: .9rem; margin-bottom: .5rem; line-height: 1.65; }
+.publication-authors strong { color: #354653; font-weight: 700; }
+.publication-authors sup { padding-left: .05em; font-size: .7em; }
+.publication-venue { color: #a54f25; font-weight: 600; }
+.publication-links { display: flex; flex-wrap: wrap; gap: .25rem .8rem; font-size: .82rem; line-height: 1.8; }
+.publication-links a { text-decoration: none; }
+.publication-links a:hover { text-decoration: underline; }
+.publication-links a::before, .publication-links .resource-pending::before { content: "["; }
+.publication-links a::after, .publication-links .resource-pending::after { content: "]"; }
+.resource-pending { color: #7a858e; }
+.site-footer { padding: 1.5rem 3rem; color: #75818a; font-size: .78rem; border-top: 1px solid #e6eaed; }
+.skip-link { position: absolute; left: 1rem; top: -6rem; z-index: 1100; padding: .65rem 1rem; background: #fff; }
+.skip-link:focus { top: .8rem; }
+@media (min-width: 992px) { html { scroll-padding-top: 0; } section.resume-section { padding: 4rem 4rem; } }
+@media (max-width: 767.98px) { .publication { grid-template-columns: 1fr; gap: 1rem; } .publication-image { max-width: 28rem; } .publication-title { margin-top: 0; } }
+@media (max-width: 575.98px) { .site-footer { padding: 1.5rem 1rem; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto !important; } }
+
+/* Compact About typography and Experience rows. */
+#about-heading {
+  font-size: clamp(1.85rem, 3.5vw, 2.65rem);
+  line-height: 1.2;
+  letter-spacing: -.025em;
+  margin-bottom: 1.2rem;
+}
+#about .introduction {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
+  margin-bottom: .4rem;
+}
+#experience .experience-item {
+  gap: .6rem 2rem;
+  margin-bottom: 2.4rem;
+}
+#experience .experience-item:last-child {
+  margin-bottom: 0;
+}
+#experience .experience-institution {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+#experience .experience-role {
+  font-size: 1.06rem;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #596772;
+}
+#experience .experience-details {
+  font-size: 1rem;
+  line-height: 1.75;
+}
+#experience .experience-date {
+  color: #246a9c;
+  font-size: .98rem;
+  line-height: 1.8;
+  white-space: nowrap;
+}
+
+.publication-authors a { text-decoration: none; }
+.publication-authors a:hover { text-decoration: underline; text-underline-offset: .15em; }
